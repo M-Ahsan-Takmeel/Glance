@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://ai.studio/apps/eb262ca6-ff52-43e4-92d6-94da6e0ae97c" target="_blank"><strong>🚀 Live Application Demo</strong></a> • 
+  <a href="https://glance-umber-gamma.vercel.app/" target="_blank"><strong>🚀 Live Application Demo</strong></a> • 
   <a href="https://github.com/M-Ahsan-Takmeel/Glance" target="_blank"><strong>💻 GitHub Repository</strong></a>
 </p>
 
@@ -45,7 +45,7 @@
 
 ## 🌐 Live Deployment URL
 
-- 🟢 **Live Deployed Application**: [https://ai.studio/apps/eb262ca6-ff52-43e4-92d6-94da6e0ae97c](https://ai.studio/apps/eb262ca6-ff52-43e4-92d6-94da6e0ae97c)
+- 🟢 **Live Deployed Application**: [https://glance-umber-gamma.vercel.app/](https://glance-umber-gamma.vercel.app/)
 - 🐙 **GitHub Repository**: [https://github.com/M-Ahsan-Takmeel/Glance](https://github.com/M-Ahsan-Takmeel/Glance)
 
 ---
