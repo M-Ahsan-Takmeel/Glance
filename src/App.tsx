@@ -21,7 +21,7 @@ import { Sparkles, ArrowRight, Loader2, RefreshCw, FileText, CheckCircle } from 
 import { generateClientPresentation } from './lib/presentationGenerator';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<ActiveTab>('Deck');
+  const [activeTab, setActiveTab] = useState<ActiveTab>('Dashboard');
   const [parsedDoc, setParsedDoc] = useState<ParsedDocResult | null>(null);
   const [selectedStyle, setSelectedStyle] = useState<StyleIntent>('Executive Summary');
   const [targetSlideCount, setTargetSlideCount] = useState<string>('Auto');
