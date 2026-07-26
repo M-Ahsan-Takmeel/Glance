@@ -1,0 +1,6 @@
+{
+  "name": "Glance",
+  "description": "Interactive in-app document deck viewer displaying document findings in graphs, bullets, points, headings, summaries, stacked bar charts, treemaps, pie charts, histograms, and box plots.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

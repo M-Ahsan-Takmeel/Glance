@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DocMaster AI - Document Corpus & Visual Deck Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script>
+      (function() {
+        try {
+          if (typeof window.global === 'undefined') {
+            window.global = window;
+          }
+          var _impl = window.fetch;
+          var patchDesc = {
+            get: function() {
+              return _impl;
+            },
+            set: function(fn) {
+              _impl = fn;
+            },
+            configurable: true,
+            enumerable: true
+          };
+
+          if (window.Window && window.Window.prototype) {
+            try {
+              Object.defineProperty(window.Window.prototype, 'fetch', patchDesc);
+            } catch (e) {}
+          }
+
+          try {
+            Object.defineProperty(window, 'fetch', patchDesc);
+          } catch (e) {}
+        } catch (err) {
+          console.warn('Fetch setter patch failed:', err);
+        }
+      })();
+    </script>
+  </head>
+  <body class="bg-[#0b1326] text-[#dae2fd] antialiased selection:bg-[#38bdf8]/30 selection:text-[#8ed5ff]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

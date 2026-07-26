@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .glass {
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-card {
+    background: rgba(23, 31, 51, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-popover {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .chart-glow {
+    filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.45));
+  }
+
+  .accent-glow {
+    box-shadow: 0 0 20px -5px rgba(56, 189, 248, 0.35);
+  }
+
+  .teal-glow {
+    filter: drop-shadow(0 0 8px rgba(68, 226, 205, 0.4));
+  }
+
+  .active-nav-indicator {
+    position: relative;
+  }
+  .active-nav-indicator::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #8ed5ff;
+    box-shadow: 0 0 8px #8ed5ff;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Typography Defaults */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #0b1326;
+  color: #dae2fd;
+  min-height: 100vh;
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
