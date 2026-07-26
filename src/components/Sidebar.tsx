@@ -16,7 +16,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, onSelectTab }) => {
             <span className="material-symbols-outlined text-xl">analytics</span>
           </div>
           <div className="overflow-hidden">
-            <div className="text-sm font-semibold text-[#8ed5ff] truncate">Alex Sterling</div>
+            <div className="text-sm font-semibold text-[#8ed5ff] truncate">Muhammad Ahsan</div>
             <div className="text-xs text-[#bdc8d1]/60 truncate">Enterprise Admin</div>
           </div>
         </div>
