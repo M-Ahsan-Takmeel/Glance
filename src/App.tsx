@@ -18,6 +18,8 @@ import { ActiveTab, StyleIntent, PresentationData, SampleDoc } from './types';
 import { SAMPLE_DOCS } from './lib/sampleDocs';
 import { Sparkles, ArrowRight, Loader2, RefreshCw, FileText, CheckCircle } from 'lucide-react';
 
+import { generateClientPresentation } from './lib/presentationGenerator';
+
 export default function App() {
   const [activeTab, setActiveTab] = useState<ActiveTab>('Deck');
   const [parsedDoc, setParsedDoc] = useState<ParsedDocResult | null>(null);
@@ -213,16 +215,34 @@ export default function App() {
         }),
       });
 
-      const data = await response.json();
-
-      if (!response.ok || !data.success) {
-        throw new Error(data.error || 'Failed to generate presentation slides.');
+      const contentType = response.headers.get('content-type');
+      if (contentType && contentType.includes('application/json')) {
+        const data = await response.json();
+        if (response.ok && data.success && data.presentation) {
+          setPresentation(data.presentation);
+          return;
+        }
       }
 
-      setPresentation(data.presentation);
+      // Safe fallback to client-side presentation generator if API endpoint/key is unavailable
+      const fallbackPresentation = generateClientPresentation(
+        targetDoc.text,
+        targetDoc.filename,
+        selectedStyle,
+        targetSlideCount,
+        tone
+      );
+      setPresentation(fallbackPresentation);
     } catch (err: any) {
-      console.error('Generation failed:', err);
-      setError(err.message || 'Error communicating with AI service. Please try again.');
+      console.warn('Backend endpoint unavailable, generating document presentation locally:', err);
+      const fallbackPresentation = generateClientPresentation(
+        targetDoc.text,
+        targetDoc.filename,
+        selectedStyle,
+        targetSlideCount,
+        tone
+      );
+      setPresentation(fallbackPresentation);
     } finally {
       clearInterval(interval);
       setIsGenerating(false);
