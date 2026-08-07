@@ -14,28 +14,30 @@
 </p>
 
 <p align="center">
-  <a href="#-project-overview--problem-statement">Overview & Problem</a> •
-  <a href="#-live-deployment-url">Live Deployment</a> •
-  <a href="#-full-features-list">Features List</a> •
-  <a href="#-ai-feature--system-prompt">AI Feature & System Prompt</a> •
-  <a href="#%EF%B8%8F-tools-services--ai-models">Tech Stack</a> •
-  <a href="#-app-in-action-screenshots">Screenshots</a> •
-  <a href="#-how-to-run-the-project">Quick Start</a>
+  <a href="#-a-project-overview-app-name--problem-statement">a. Overview & Problem</a> •
+  <a href="#-b-live-deployed-url">b. Live Deployment</a> •
+  <a href="#-c-full-features-list">c. Features List</a> •
+  <a href="#-d-ai-feature--system-prompt">d. AI Feature & Prompt</a> •
+  <a href="#%EF%B8%8F-e-tools-services--ai-models">e. Tech Stack</a> •
+  <a href="#-f-screenshots-of-the-app-in-action-3-images">f. Screenshots</a> •
+  <a href="#-g-how-to-run-the-project">g. Quick Start</a>
 </p>
 
 ---
 
-## 📌 Project Overview & Problem Statement
+## 📌 [a] Project Overview, App Name & Problem Statement
 
 ### **App Name**: Glance
-**Glance** is an interactive, in-app document deck viewer and AI data intelligence platform that converts raw Word documents (`.docx`), strategic papers, and corporate reports into high-impact, presentable visual slide decks.
+
+### **What It Does**
+**Glance** is an interactive document intelligence platform that converts raw Word documents (`.docx`), strategic proposals, quarterly reviews, and corporate reports into high-impact, presentable visual slide decks powered by Gemini AI and client-side document processing.
 
 ### **The Real Problem It Solves**
 - **Hours Wasted on Manual Slide Creation**: Executives, product managers, management consultants, and researchers spend 3 to 5 hours per presentation manually reading 30+ page Word documents, summarizing key points, and formatting charts in PowerPoint or Google Slides.
 - **Cognitive Overload & Low Engagement**: Stakeholders struggle to digest long, dense text files. Critical financial metrics, statistical trends, and strategic takeaways get lost in paragraphs of text.
-- **Design Bottlenecks**: Non-designer teams struggle to format data cleanly into structured visual charts (treemaps, stacked bars, histograms, box plots).
+- **Design & Data Visualization Bottlenecks**: Non-designer teams struggle to format raw data cleanly into structured visual charts (treemaps, stacked bars, histograms, box plots).
 
-### **Who It Is For**
+### **For Whom (Target Audience)**
 - **Executive Leadership & Founders**: Transform quarterly reports into interactive executive briefings in seconds.
 - **Product & Strategy Operations**: Turn Product Requirements Documents (PRDs) and market research papers into presentable decks.
 - **Researchers & Analysts**: Summarize academic papers, whitepapers, and operational data into clear statistical dispersion cards.
@@ -43,14 +45,14 @@
 
 ---
 
-## 🌐 Live Deployment URL
+## 🌐 [b] Live Deployed URL
 
 - 🟢 **Live Deployed Application**: [https://glance-umber-gamma.vercel.app/](https://glance-umber-gamma.vercel.app/)
 - 🐙 **GitHub Repository**: [https://github.com/M-Ahsan-Takmeel/Glance](https://github.com/M-Ahsan-Takmeel/Glance)
 
 ---
 
-## ✨ Full Features List
+## ✨ [c] Full Features List
 
 - 📑 **In-Browser `.docx` Document Parsing**: Client-side document parsing via `mammoth.js` extracts structured text, section headings, word counts, and character statistics securely in the browser.
 - 🤖 **Gemini AI Semantic Restructuring**: Translates unstructured document text into 13 distinct visual card types using `@google/genai` (`gemini-3.6-flash`).
@@ -76,7 +78,7 @@
 
 ---
 
-## 🤖 AI Feature & System Prompt
+## 🤖 [d] AI Feature & System Prompt
 
 ### **What the AI Feature Does**
 The Glance AI feature accepts raw extracted document text, analyzes its semantic hierarchy, extracts factual quantitative metrics ($ ARR, % growth, latency days, budget sizes), and generates a strict structured JSON schema mapping document sections into visual card components.
@@ -114,7 +116,7 @@ Document Filename: ${filename || 'Document'}`;
 
 ---
 
-## 🛠️ Tools, Services & AI Models
+## 🛠️ [e] Tools, Services & AI Models
 
 | Category | Technology / Service | Usage & Purpose |
 | :--- | :--- | :--- |
@@ -128,7 +130,7 @@ Document Filename: ${filename || 'Document'}`;
 
 ---
 
-## 📸 App in Action (Screenshots)
+## 📸 [f] Screenshots of the App in Action (3 Images)
 
 ### 1. **Dashboard Landing Hub**
 *Central hub displaying active corpus statistics, processing benchmarks, and the Quick Document Transformer drop zone.*
@@ -151,7 +153,7 @@ Document Filename: ${filename || 'Document'}`;
 
 ---
 
-## 🚀 How to Run the Project
+## 🚀 [g] How to Run the Project
 
 ### **Prerequisites**
 - **Node.js**: v18.x or later installed
